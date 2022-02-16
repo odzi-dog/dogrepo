@@ -13,8 +13,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@sveltejs/adapter-vercel": "^1.0.0-next.43",
     "prettier": "^2.5.1",
-    "turbo": "latest"
+    "turbo": "^1.1.2"
   },
   "engines": {
     "npm": ">=7.0.0",

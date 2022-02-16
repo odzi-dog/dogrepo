@@ -2,9 +2,12 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": [".vercel_build_output/**", ".svelte-kit/**"]
     },
     "lint": {
+      "outputs": []
+    },
+    "format": {
       "outputs": []
     },
     "dev": {

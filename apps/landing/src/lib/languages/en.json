@@ -1,0 +1,41 @@
+{
+	"language": {
+		"buttonTitle": "Language",
+		"ru": "Русский",
+		"en": "English"
+	},
+	"layout": {
+		"sidebar": {
+			"main": "Main",
+			"discord": "Discord",
+			"github": "Github",
+
+			"information": {
+				"badge": "Information",
+				"title": "In development",
+				"description": "At the moment, all of our services, sites, and crap like that are in deep development. The developer is stupid - he doesn't want to do anything."
+			}
+		},
+		"footer": {
+			"about": "About our team"
+		}
+	},
+	"tiles": {
+		"leggydog": {
+			"title": "Superior <em>E621</em> telegram bot",
+			"description": "A bot that will keep you up-to-date with all new images on E621. You just specify what you like, and it'll just work!",
+			"badge": {
+				"telegram": "Telegram-bot",
+				"adult": "18+"
+			},
+			"button": {
+				"openChat": "Open in Telegram",
+				"support": "Support on Patreon"
+			}
+		},
+		"empty": {
+			"title": "Empty here",
+			"description": "Yeah, that could happen here, too. I haven't figured out what else to do yet. That's why it's empty."
+		}
+	}
+}
