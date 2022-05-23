@@ -4,7 +4,7 @@
   import { Icon } from '@steeze-ui/svelte-icon';
   import { Translate, ChevronUp, ChevronDown } from '@steeze-ui/heroicons';
   import { onMount } from 'svelte';
-import { LocalStorageService } from '$lib/modules/LocalStorage';
+  import { LocalStorageService } from '$lib/modules/LocalStorage';
 
   // onMount event
   onMount(() => {
@@ -47,9 +47,9 @@ import { LocalStorageService } from '$lib/modules/LocalStorage';
 </script>
 
 <!-- Layout -->
-<div class="relative" id="languages-dropdown">
+<div class="relative z-50" id="languages-dropdown">
   <!-- Action button -->
-  <button on:click={() => isDropdownShown = !isDropdownShown} class="p-2 rounded-md bg-gray-800 flex items-center justify-center">
+  <button on:click={() => isDropdownShown = !isDropdownShown} class="bg-gray-800 mx-1 px-4 py-2 rounded-full flex items-center justify-center">
     { #if isDropdownShown }
       <Icon src={ChevronUp} class="w-4 h-4 text-white" />
     { :else }

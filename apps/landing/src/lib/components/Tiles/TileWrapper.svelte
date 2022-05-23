@@ -12,8 +12,8 @@
 </script>
 
 <!-- Layout -->
-<div class="w-1/2 h-1/2 relative p-4">
-  <div style="background: { GenerateBackground(tile.background) }" class="w-full flex flex-col h-full rounded-2xl shadow-lg relative">
+<div class="w-full lg:w-1/2 lg:h-1/2 relative p-4">
+  <div style="background: { GenerateBackground(tile.background) }" class="w-full flex flex-col h-full rounded-2xl shadow-lg relative py-4 lg:py-0">
     <!-- Header -->
     <div class="py-2 w-full rounded-t-2xl flex justify-between items-center px-1.5">
       <!-- Icon -->
@@ -35,12 +35,12 @@
 
     <!-- Content -->
     <div class="px-2 flex-grow flex flex-col justify-center">
-      <h1 class="px-2 text-xl text-white font-medium">{ @html $_(`tiles.${ key }.title`) }</h1>
-      <p class="px-2 text-sm text-white">{ @html $_(`tiles.${ key }.description`) }</p>
+      <h1 class="px-2 text-sm md:text-xl text-white font-medium">{ @html $_(`tiles.${ key }.title`) }</h1>
+      <p class="px-2 text-xs md:text-sm text-white">{ @html $_(`tiles.${ key }.description`) }</p>
 
       <!-- Buttons -->
       { #if tile.buttons?.length > 0 }
-        <div class="mt-4 flex items-center">
+        <div class="mt-4 flex flex-col md:flex-row items-center">
           { #each tile.buttons as button }
             <svelte:component 
               this={button.type == 'FullButton' ? FullButton : GhostButton} 
