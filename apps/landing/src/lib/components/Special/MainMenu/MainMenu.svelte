@@ -15,7 +15,7 @@
   <button on:click={() => isMenuOpened = true} class="p-2 rounded-full bg-gray-800 flex items-center justify-center">
     <Icon src={Menu} class="w-4 h-4 text-white" />
 
-    <p class="text-xs text-white ml-1.5">Меню</p>
+    <p class="text-xs text-white ml-1.5">{ $_("layout.sidebar.openMenu") }</p>
   </button>
 </div>
 
