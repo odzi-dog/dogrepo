@@ -37,23 +37,23 @@
     <div class="px-2 flex-grow flex flex-col justify-center">
       <h1 class="px-2 text-sm md:text-xl text-white font-medium">{ @html $_(`tiles.${ key }.title`) }</h1>
       <p class="px-2 text-xs md:text-sm text-white">{ @html $_(`tiles.${ key }.description`) }</p>
-
-      <!-- Buttons -->
-      { #if tile.buttons?.length > 0 }
-        <div class="mt-4 flex flex-col md:flex-row items-center">
-          { #each tile.buttons as button }
-            <svelte:component 
-              this={button.type == 'FullButton' ? FullButton : GhostButton} 
-              text={ $_(`tiles.${ key }.button.${ button.text }`) }
-              on:click={() => {
-                if (button.href) {
-                  goto(button.href);
-                };
-              }}
-            />
-          { /each }
-        </div>
-      { /if }
     </div>
+
+    <!-- Buttons -->
+    { #if tile.buttons?.length > 0 }
+      <div class="pb-2 px-2 mt-4 flex flex-col md:flex-row items-stretch">
+        { #each tile.buttons as button }
+          <svelte:component 
+            this={button.type == 'FullButton' ? FullButton : GhostButton} 
+            text={ $_(`tiles.${ key }.button.${ button.text }`) }
+            on:click={() => {
+              if (button.href) {
+                goto(button.href);
+              };
+            }}
+          />
+        { /each }
+      </div>
+    { /if }
   </div>
 </div>
