@@ -6,9 +6,11 @@
 	},
 	"layout": {
 		"sidebar": {
-			"main": "Main",
+			"pawcapsu_services": "Pawcapsu",
+			"bluk_services": "Bluk",
 			"discord": "Discord",
 			"github": "Github",
+
 			"closeMenu": "Close menu",
 			"openMenu": "Menu",
 
@@ -36,11 +38,11 @@
 				"support": "Support on Patreon"
 			}
 		},
-		"teleooks": {
+		"klingbooks": {
 			"title": "Enjoy books and stories without leaving <em>Telegram</em>",
 			"description": "Automatically updated library of books, short stories and fanfics in the most convenient and popular messenger.",
 			"badge": {
-				"name": "Teleooks",
+				"name": "Klingbooks",
 				"type": "Telegram-service",
 				"wip": "In development"
 			},

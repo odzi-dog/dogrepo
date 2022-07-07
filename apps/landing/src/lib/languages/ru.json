@@ -6,9 +6,11 @@
 	},
 	"layout": {
 		"sidebar": {
-			"main": "Главная",
+			"pawcapsu_services": "Pawcapsu",
+			"bluk_services": "Bluk",
 			"discord": "Discord",
 			"github": "Github",
+			
 			"closeMenu": "Закрыть меню",
 			"openMenu": "Меню",
 
@@ -35,11 +37,11 @@
 				"openChat": "Открыть в Телеграме"
 			}
 		},
-		"teleooks": {
+		"klingbooks": {
 			"title": "Наслаждайтесь книгами и рассказами, не выходя из <em>Телеграма</em>",
 			"description": "Автоматически обновляемая библиотека книг, рассказов и фанфиков в самом удобном и популярном мессенджере.",
 			"badge": {
-				"name": "Teleooks",
+				"name": "Klingbooks",
 				"type": "Телеграм-сервис",
 				"wip": "В разработке"
 			},

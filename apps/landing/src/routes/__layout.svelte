@@ -26,12 +26,14 @@
   });
 </script>
 
+<svelte:head>
+  <title>odzi.dog</title>
+</svelte:head>
+
 <!-- Loading screen -->
 { #if $isLoading || loading }
   <div transition:fade class="absolute z-50 bg-white w-full h-screen"></div>
-{ /if }
-
+{ :else }
 <!-- Layout -->
-{ #if !$isLoading }
   <slot />
 { /if }

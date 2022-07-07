@@ -1,10 +1,12 @@
 <script lang="ts">
   // Importing components
   import { _ } from 'svelte-i18n';
+  import { page } from '$app/stores';
   import { LanguageSelectorButton } from '$lib/components/Special';
   import { FullButton } from '$lib/components/Buttons';
   import { Icon } from '@steeze-ui/svelte-icon';
   import { Menu } from '@steeze-ui/heroicons';
+  import { MenuItems } from '$lib/config';
 
   // Mobile-only variable
   let isMenuOpened = false;
@@ -39,10 +41,11 @@
   <div class="flex flex-col">
     <!-- Services -->
     <div class="w-full flex flex-col text-black relative opacity-80">
-      <a class="w-min my-3 border-b-2 border-black text-left text-4xl" href="/">{ $_("layout.sidebar.main") }</a>
+      { #each Object.entries(MenuItems) as [ key, item ] }
+        { @const isCurrentPage = item.path_regexp?.test($page.url.toString()) }
 
-      <a class="my-3 opacity-50 text-left text-4xl" href="https://discord.gg/EHvUDyNQ7J">{ $_("layout.sidebar.discord") }</a>
-      <a class="my-3 opacity-50 text-left text-4xl" href="https://github.com/odzi-dog">{ $_("layout.sidebar.github") }</a>
+        <a class="{ isCurrentPage ? "border-b-2 border-black" : "opacity-50" } my-3 text-left text-4xl" href={item.href}>{ $_(`layout.sidebar.${ key }`) }</a>
+      { /each }
     </div>
     
     <!-- Other services -->

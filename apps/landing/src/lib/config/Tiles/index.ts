@@ -1,1 +1,2 @@
-export * from './TilesList.const';
+export * from './Types';
+export * from './categories';

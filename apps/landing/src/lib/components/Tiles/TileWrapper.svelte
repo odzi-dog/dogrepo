@@ -46,6 +46,7 @@
           <svelte:component 
             this={button.type == 'FullButton' ? FullButton : GhostButton} 
             text={ $_(`tiles.${ key }.button.${ button.text }`) }
+            extraClasses="my-1 md:my-0 "
             on:click={() => {
               if (button.href) {
                 goto(button.href);
